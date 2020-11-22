@@ -8,17 +8,17 @@ var burger = {
     });
   },
   // The variables cols and vals are arrays.
-  insertOne: function(cols, boolean, cb) {
-    orm.insertOne("burgers", cols, boolean, function(res) {
+  insertOne: function(cols, cb) {
+    orm.insertOne("burgers", cols, function(res) {
       cb(res);
     });
   },
-  updateOne: function(objColVals, condition, cb) {
-    orm.updateOne("cats", objColVals, condition, function(res) {
+  updateOne: function(objColVals, oldID, cb) {
+    orm.updateOne("burgers", objColVals, oldID, function(res) {
       cb(res);
     });
   },
 };
 
-// Export the database functions for the controller (catsController.js).
+// Export the database functions for the controller (burgerController.js).
 module.exports = burger;

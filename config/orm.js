@@ -19,8 +19,8 @@ var orm = {
     });
     }, 
 
-    updateOne: function(newBurger, oldburger, cb){   
-      connection.query("UPDATE FROM burgers SET ? WHERE ?", [newBurger, oldburger], function(err, result) {
+    updateOne: function(newBurger, oldburgerID, cb){   
+      connection.query("UPDATE FROM burgers SET ? WHERE ?", [newBurger, oldburgerID], function(err, result) {
         if (err) {
           throw err;
         }

@@ -4,7 +4,8 @@
   "description": "Create a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!).  Follow the MVC design pattern; use Node and MySQL to query and route data in your app, and Handlebars to generate your HTML.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,6 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "mysql": "^2.18.1"
-  }
+  },
+  "devDependencies": {}
 }

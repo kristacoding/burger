@@ -3,11 +3,12 @@ var connection = require("../config/connection.js");
 
 // Object for all our SQL statement functions.
 var orm = {
-    selectAll: function() {
+    selectAll: function(cb) {
       connection.query("SELECT * FROM burgers", function(err, result) {
         if (err) {
           throw err;
-        }
+        };
+        cb(result);
         console.log(result);
         //cb(result);
       });

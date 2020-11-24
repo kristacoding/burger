@@ -3,12 +3,13 @@ var connection = require("../config/connection.js");
 
 // Object for all our SQL statement functions.
 var orm = {
-    selectAll: function(cb) {
+    selectAll: function() {
       connection.query("SELECT * FROM burgers", function(err, result) {
         if (err) {
           throw err;
         }
-        cb(result);
+        console.log(result);
+        //cb(result);
       });
     },
     insertOne: function(answer, cb) {
@@ -29,5 +30,5 @@ var orm = {
     }
   };
   
-  // Export the orm object for the model (cat.js).
+  // Export the orm object for the model (burger.js).
   module.exports = orm;

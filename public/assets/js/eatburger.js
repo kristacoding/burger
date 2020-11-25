@@ -8,12 +8,12 @@ $(function() {
         //Grab burger name from form field.
         //When user submits burger name, set devoured state to false.
         var newBurger = {
-        burger_name: $("#burgerToGo").val().trim(),
+        burger_name: $("#burger").val().trim(),
         devoured: 0
         };
 
         // Send the POST request using ajax.
-        $.ajax("/burgers", {
+        $.ajax("/burgers/create", {
         type: "POST",
         data: newBurger
         }).then(
@@ -27,7 +27,8 @@ $(function() {
 
     //Click event for "Devour me" button.
     $(".change-devour").on("click", function(event) {
-        var id = $(this).data("id");
+        var id = $(this).attr("id");
+        console.log(id);
         var newDevour = $(this).data("newdevour");
     
         var newDevourState = {
@@ -35,7 +36,7 @@ $(function() {
         };
     
         // Send the PUT request using ajax.
-        $.ajax("/burgers" + id, {
+        $.ajax("/burgers/" + id, {
           type: "PUT",
           data: newDevourState
         }).then(

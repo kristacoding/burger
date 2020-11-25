@@ -14,6 +14,7 @@ var orm = {
       });
     },
     insertOne: function(answer, cb) {
+      console.log(answer);
       connection.query("INSERT INTO burgers SET ?", [answer], function(err, result) {
         if (err) throw err;
         console.log("New Burger has been added");
@@ -22,7 +23,7 @@ var orm = {
     }, 
 
     updateOne: function(newBurger, oldburgerID, cb){   
-      connection.query("UPDATE FROM burgers SET ? WHERE ?", [newBurger, oldburgerID], function(err, result) {
+      connection.query("UPDATE burgers SET ? WHERE id = ?", [newBurger, oldburgerID], function(err, result) {
         if (err) {
           throw err;
         }

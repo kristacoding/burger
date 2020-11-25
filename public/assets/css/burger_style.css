@@ -1,5 +1,5 @@
 body {
-    background-color:#ffae42 ;
+    background-color: #FFAE42;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: large;
     text-align: center;
@@ -7,13 +7,12 @@ body {
 
 .jumbotron {
     text-align: center;
-    background-image: url(https://static.onecms.io/wp-content/uploads/sites/9/2019/05/Burger-National-Hamburger-Day-FT-Blog0619.jpg);
+    background-image: url(https://media.istockphoto.com/photos/hamburger-with-fries-picture-id617364554?k=6&m=617364554&s=612x612&w=0&h=BifDNyNdMMMPvE3q9MX3PmBPmmIfG_9v5jbarS7vHLo=);
     color: black
 }
 
 li{
-    padding: 2%;
-    margin: 1%
+    padding-bottom: 2%;
 }
 
 h2{
